@@ -2887,3 +2887,7 @@
 46.17.174.172 - - [06/Oct/2024:17:54:44 +0000] "GET / HTTP/1.1" 200 71710 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0"
 47.128.49.99 - - [06/Oct/2024:17:57:25 +0000] "GET /robots.txt HTTP/1.1" 404 3757 "-" "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)"
 47.128.20.216 - - [06/Oct/2024:18:01:24 +0000] "GET /robots.txt HTTP/1.1" 404 3757 "-" "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)"
+46.17.174.172 - - [06/Oct/2024:19:37:47 +0000] "GET / HTTP/1.1" 302 407 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0"
+46.17.174.172 - - [06/Oct/2024:19:37:48 +0000] "GET / HTTP/1.1" 200 71710 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:98.0) Gecko/20100101 Firefox/98.0"
+154.216.17.83 - - [06/Oct/2024:19:40:35 +0000] "GET /.git/config HTTP/1.1" 404 4280 "-" "python-requests/2.32.3"
+154.216.17.83 - - [06/Oct/2024:19:40:39 +0000] "GET /.git/config HTTP/1.1" 302 485 "-" "python-requests/2.32.3"
