@@ -1,0 +1,90 @@
+/*--
+/*  2.2 - Form CSS
+/*----------------------------------------*/
+label {
+	display: block;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+
+/*Input Field & Select*/
+input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+textarea {
+	box-shadow: none;
+	color: $body-light;
+	border-radius: 2px;
+	margin-bottom: 0;
+	padding: 10px 25px;
+	max-width: 100%;
+	width: 100%;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 400;
+	border: 1px solid rgba($secondary, 0.2);
+	margin-top: 20px;
+	transition: $transition-default;
+	background-color: $white;
+
+	&:focus{
+		outline: none;
+		border-color: $secondary;
+	}
+}
+textarea {
+	height: 280px;
+	resize: none;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-position: calc(100% - 25px) 50%;
+	background-repeat: no-repeat;
+	font-family: $body-font;
+	width: 100%;
+	border: none;
+	background-color: #f7f7f7;
+	line-height: 24px;
+	font-weight: 300;
+	height: 50px;
+	padding: 10px 44px 10px 21px;
+	color: $body-color;
+	border-radius: 0;
+	max-width: 500px;
+	& option {}
+}
+
+// Single Select 2 
+.reviews-rating{
+    margin-top: 15px;
+
+    & label{
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        color: #52565b;
+        margin-bottom: 0;
+    }
+    & .rating{
+        display: flex;
+        margin-top: 5px;
+        
+        & li{
+            font-size: 16px;
+            color: #d0d0d0;
+            margin: 0 2px;
+            cursor: pointer;
+
+            & i{
+                transition: $transition-default;
+
+                &.star,
+                &.hover{
+                    color: #ffba00;
+                }
+            }
+        }
+    }
+}

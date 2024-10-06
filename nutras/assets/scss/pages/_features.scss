@@ -1,0 +1,192 @@
+/*--
+/*  4.2 - Features CSS
+/*----------------------------------------*/
+
+// Features Wrapper 
+.features-wrapper{
+    margin-top: -50px;
+
+    & .row{
+        & > *{
+            &:nth-child(2n+2){
+                & .single-feature{
+                    border-left: 1px solid #f3f0ec;
+                    border-right: 1px solid #f3f0ec;
+
+                    @media #{$tablet-device, $large-mobile}{
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Single Features 
+.single-feature{
+    text-align: center;
+    padding: 0 25px;
+    margin-top: 50px;
+
+    @media #{$tablet-device, $large-mobile}{
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    & .feature-icon{
+        & span{
+            width: 170px;
+            height: 170px;
+            line-height: 175px;
+            background-color: #f8f6f4;
+            text-align: center;
+            display: inline-block;
+            font-size: 70px;
+            color: $secondary;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: $transition-default;
+            transition-delay: 0.3s;
+
+            @media #{$small-mobile}{
+                width: 140px;
+                height: 140px;
+                line-height: 145px;
+                font-size: 60px;
+            }
+
+            &::before{
+                position: absolute;
+                content: '';
+                bottom: -150px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: $secondary;
+                transition: $transition-default;
+                transition-delay: 0.3s;
+                z-index: -1;
+
+                @media #{$small-mobile}{
+                    bottom: -120px;
+                }
+            }
+
+            &::after{
+                position: absolute;
+                content: '';
+                bottom: -170px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background-color: $primary;
+                transition: $transition-default;
+                z-index: -1;
+
+                @media #{$small-mobile}{
+                    bottom: -140px;
+                }
+            }
+
+            & i{
+
+            }
+        }
+    }
+    & .feature-content{
+        padding-top: 35px;
+
+        & .content-wrapper{
+            background-color: $white;
+        }
+
+        & .title{
+            font-size: 35px;
+
+            @media #{$desktop-device}{
+                font-size: 30px;
+            }
+            @media #{$small-mobile}{
+                font-size: 24px;
+            }
+        }
+        & p{
+            margin-top: 20px;
+        }
+        & .arrow{
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: $primary;
+            color: $white;
+            font-size: 25px;
+            border-radius: 50%;
+            margin-top: 35px;
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition-default;
+
+            @media #{$tablet-device, $large-mobile}{
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &:hover{
+                background-color: $secondary;
+            }
+        }
+    }
+
+    &.active,
+    &:hover{
+        & .feature-icon{
+            & span{
+                transition-delay: 0;
+                color: $white;
+    
+                &::before{
+                    bottom: 0px;
+                    transition-delay: 0;
+                }
+    
+                &::after{
+                    bottom: -150px;
+                    transition-delay: 0.3s;
+
+                    @media #{$small-mobile}{
+                        bottom: -120px;
+                    }
+                }
+            }
+        }
+        & .feature-content{
+            & .arrow{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

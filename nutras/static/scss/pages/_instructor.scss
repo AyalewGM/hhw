@@ -1,0 +1,106 @@
+/*--
+/*  4.11 - Instructor CSS
+/*----------------------------------------*/
+
+.instructor-wrapper{
+    padding-top: 40px;
+
+    @media #{$small-mobile}{
+        padding-top: 10px;
+    }
+}
+
+// Single Instructor
+.single-instructor{
+    margin-top: 30px;
+
+    & .instructor-images{
+        & img{
+            width: 100%;
+        }
+    }
+    & .instructor-content{
+        text-align: center;
+        background-image: -moz-linear-gradient( -90deg, rgb(248,246,244) 0%, rgb(255,255,255) 100%);
+        background-image: -webkit-linear-gradient( -90deg, rgb(248,246,244) 0%, rgb(255,255,255) 100%);
+        background-image: -ms-linear-gradient( -90deg, rgb(248,246,244) 0%, rgb(255,255,255) 100%);
+        padding-bottom: 30px;
+        padding-top: 30px;
+        transition: $transition-default;
+        position: relative;
+        
+        & .social{
+            padding-bottom: 25px;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: $transition-default;
+
+            & a{
+                width: 45px;
+                height: 45px;
+                line-height: 43px;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                border-radius: 50%;
+                margin: 0 7px;
+                transition: $transition-default;
+
+                &:hover{
+                    background-color: $primary;
+                    border-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+
+        & .designation{
+            font-size: 14px;
+            color: $primary;
+        }
+        & .name{
+            font-size: 28px;
+            font-weight: 500;
+            margin-top: 15px;
+
+            @media #{$small-mobile}{
+                font-size: 22px;
+            }
+        }
+    }
+
+    &:hover{
+        & .instructor-content{
+            margin-top: -70px;
+            padding-top: 100px;
+
+            & .social{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+
+// Instructor Button
+.instructor-btn{
+    padding-top: 60px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

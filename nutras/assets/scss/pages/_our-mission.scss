@@ -1,0 +1,101 @@
+/*--
+/*  4.10 - Our Mission CSS
+/*----------------------------------------*/
+
+// Our Misssion Wrapper 
+.our-mission-wrapper{
+    & .content{
+        & .sub-title{
+            font-size: 35px;
+            color: $primary;
+            font-weight: 400;
+
+            @media #{$desktop-device}{
+                font-size: 32px;
+            }
+            @media #{$small-mobile}{
+                font-size: 24px;
+            }
+        }
+        & .main-title{
+            font-size: 57px;
+            font-weight: 400;
+            margin-top: 20px;
+
+            @media #{$desktop-device}{
+                font-size: 48px;
+            }
+            @media #{$small-mobile}{
+                font-size: 30px;
+            }
+        }
+        & p{
+            margin-top: 25px;
+        }
+    }
+    & .content-list{
+        @media #{$extraBig-device, $laptop-device}{
+            padding-left: 70px;
+        }
+        @media #{$tablet-device, $large-mobile}{
+            padding-top: 40px;
+        }
+
+        & ul{
+            & li{
+                font-size: 22px;
+                font-weight: 500;
+                color: $heading-color;
+                position: relative;
+                padding-left: 40px;
+
+                @media #{$desktop-device}{
+                    font-size: 20px;
+                }
+                @media #{$small-mobile}{
+                    font-size: 16px;
+                    padding-left: 20px;
+                }
+
+                & + li{
+                    margin-top: 28px;
+                }
+
+                &::before{
+                    position: absolute;
+                    content: '';
+                    width: 9px;
+                    height: 9px;
+                    background-color: $primary;
+                    border-radius: 50%;
+                    top: 18px;
+                    left: 0;
+
+                    @media #{$small-mobile}{
+                        width: 7px;
+                        height: 7px;
+                        top: 12px;
+                    }
+                }
+            }
+        }
+        & .btn{
+            margin-top: 40px;
+            margin-left: 40px;
+
+            @media #{$small-mobile}{
+                margin-left: 20px;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,359 @@
+/*--
+/*  5.1 - Sidebar Widget CSS
+/*----------------------------------------*/
+
+// Sidebar Wrapper
+.sidebar {}
+
+
+// Sidebar Widget 
+.sidebar-widget{
+    margin-top: 50px;
+
+    & .social{
+        display: flex;
+        margin-top: 25px;
+        flex-wrap: wrap;
+        
+        & li{
+            padding-top: 10px;
+            margin-right: 20px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+
+            & a{
+                display: block;
+                width: 50px;
+                height: 50px;
+                line-height: 48px;
+                border: 1px solid rgba($secondary, 0.25);
+                border-radius: 50%;
+                text-align: center;
+                font-size: 18px;
+                color: $dark;
+                transition: $transition-default;
+
+                @media #{$desktop-device}{
+                    width: 45px;
+                    height: 45px;
+                    line-height: 43px;
+                }
+
+                &:hover{
+                    background-color: $primary;
+                    border-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Widget Title 
+.widget-title{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: -7px;
+}
+
+// Widget Information 
+.widget-information{
+    background-color: $grey;
+    padding: 30px 30px 40px;
+    border-radius: 2px;
+
+    & .info-price{
+        text-align: center;
+
+        & .price{
+            font-size: 30px;
+            font-weight: 700;
+            color: $secondary;
+            display: block;
+        }
+    }
+    & .info-list{
+        & ul{
+            border-top: 1px solid #d1e6d9;
+            margin-top: 35px;
+            
+            & li{
+                border-bottom: 1px solid #d1e6d9;
+                padding: 15px 0;
+
+                & i{
+                    color: $primary;
+                    margin-right: 3px;
+                    font-size: 16px;
+
+                    @media #{$desktop-device}{
+                        font-size: 15px;
+                    }
+                }
+                & strong{
+                    color: $heading-color;
+                    font-size: 16px;
+                    font-weight: 500;
+
+                    @media #{$desktop-device}{
+                        font-size: 15px;
+                    }
+                }
+                & span{
+                    color: $body-color;
+                    display: block;
+                    float: right;
+                    font-size: 16px;
+                    font-weight: 400;
+
+                    @media #{$desktop-device}{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    & .info-btn{
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+
+// Widget Search 
+.widget-search{
+    position: relative;
+
+    input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]){
+        width: 100%;
+        height: 60px;
+        border: 1px solid rgba($secondary, 0.2);
+        border-radius: 2px;
+        padding: 0 20px;
+        padding-right: 60px;
+        outline: none;
+        transition: $transition-default;
+        font-size: 15px;
+        font-weight: 400;
+        color: #52565b;
+        background-color: $white;
+        margin-top: 0;
+
+        @include placeholder{
+            opacity: 1;
+        }
+
+        &:focus{
+            border-color: $secondary;
+        }
+    }
+    & button{
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        padding: 0;
+        text-align: center;
+        border-radius: 2px;
+        background-color: $secondary;
+        border: 0;
+        top: 6px;
+        right: 6px;
+        font-size: 16px;
+        color: $white;
+    }  
+} 
+
+// Widget Categories 
+.widget-category{
+    padding: 35px;    
+    border-radius: 2px;
+    margin-top: 30px;
+    background-color: $grey;
+
+    @media #{$desktop-device, $small-mobile}{
+        padding: 25px;
+    }
+
+    & .category-list{
+        & li{
+            & + li{
+                margin-top: 10px;
+            }
+            & a{
+                padding: 0 15px;
+                height: 50px;
+                line-height: 50px;
+                display: block;
+                color: $body-color;
+                border-radius: 2px;
+                font-size: 15px;
+                font-weight: 500;
+                transition: $transition-default;
+                background-color: $white;
+
+                @media #{$desktop-device}{
+                    font-size: 14px;
+                }
+
+                & span{
+                    display: block;
+                    float: right;
+                }
+
+                &:hover{
+                    color: $white;
+                    background-color: $secondary;
+                    border-color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+// Widget Newsletter 
+.widget-post{
+    padding: 35px;
+    border: 1px solid rgba($secondary, 0.2);
+    border-radius: 2px;
+    margin-top: 30px;
+
+    @media #{$desktop-device, $small-mobile}{
+        padding: 25px;
+    }
+
+    & .post-items{
+        & li{
+            border-bottom: 1px solid rgba($secondary, 0.2);
+            padding: 20px 0;
+
+            &:first-child{
+                padding-top: 0;
+            }
+
+            &:last-child{
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+
+    & .single-post{
+        display: flex;
+        align-items: center;
+
+        & .post-thumb{
+            & a{
+                display: block;
+
+                & img{
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    object-position: center;
+                    object-fit: cover;
+
+                    @media #{$desktop-device, $small-mobile}{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+        & .post-content{
+            flex: 1;
+            padding-left: 30px;
+
+            @media #{$desktop-device, $small-mobile}{
+                padding-left: 20px;
+            }
+
+            & .title{
+                margin-bottom: 0;
+
+                & a{
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: $dark;
+                    font-family: $body-font;
+                    line-height: 1.4;
+
+                    @media #{$desktop-device, $small-mobile}{
+                        font-size: 14px;
+                    }
+
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
+            & .date{
+                font-size: 13px;
+                color: #52565b;
+                margin-top: 5px;
+                display: block;
+
+                & i{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+
+// Widget Tags
+.widget-tags{
+    padding: 35px;
+    border: 1px solid rgba($secondary, 0.2);
+    border-radius: 2px;
+    margin-top: 30px;
+
+    @media #{$desktop-device, $small-mobile}{
+        padding: 25px;
+    }
+
+    & .tags-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -7px;
+        margin-right: -7px;
+        margin-top: -10px;
+
+        & li{
+            padding: 10px 5px 0;
+
+            & a{
+                height: 45px;
+                line-height: 43px;
+                padding: 0 35px;
+                font-size: 15px;
+                background-color: $grey;
+                display: block;                
+                color: $body-color;
+                border-radius: 2px;
+                font-size: 15px;
+                font-weight: 500;
+                transition: $transition-default;
+
+                @media #{$desktop-device}{
+                    font-size: 14px;
+                    padding: 0 22px;
+                }
+                @media #{$large-mobile}{
+                    padding: 0 20px;
+                }
+
+                &:hover{
+                    background-color: $secondary;
+                    border-color: $secondary;
+                    color: $white;
+                }
+            }
+        }
+        
+    }
+}

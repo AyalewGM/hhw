@@ -1,0 +1,88 @@
+/*--
+/*  4.17 - Error CSS
+/*----------------------------------------*/
+
+
+// Error Section 
+.error-section{
+    position: relative;
+
+    & .shape{
+        position: absolute;
+        bottom: 0;
+        left: 9%;
+
+        @media #{$laptop-device}{
+            width: 260px;
+            left: 5%;
+        }
+        @media #{$desktop-device}{
+            width: 210px;
+            left: 2%;
+        }
+        @media #{$tablet-device, $large-mobile}{
+            display: none;
+        }
+    }
+}
+
+
+// Error Wrapper 
+.error-wrapper{
+    text-align: center;
+    
+    & .error-images{
+        & img{}
+    }
+    & .error-content{
+        max-width: 520px;
+        margin: 45px auto 0;
+
+        & .title{
+            font-size: 57px;
+            font-weight: 500;
+            color: #f03c3a;
+
+            @media #{$small-mobile}{
+                font-size: 40px;
+            }
+        }
+        & .sub-title{
+            font-size: 30px;
+            font-weight: 400;
+            margin-top: 15px;
+            
+            @media #{$small-mobile}{
+                font-size: 20px;
+            }
+        }
+        & p{
+            margin-top: 15px;
+        }
+        & .btn{
+            margin-top: 40px;
+
+            @media #{$small-mobile}{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

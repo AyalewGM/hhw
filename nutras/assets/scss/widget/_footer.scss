@@ -1,0 +1,137 @@
+/*--
+/*  5.2 - Footer Widget CSS
+/*----------------------------------------*/
+
+// Footer Widget Section
+.footer-widget-section{
+    position: relative;
+    
+    & .shape-01{
+        position: absolute;
+        top: 70px;
+        left: 60px;
+    }
+    & .shape-02{
+        position: absolute;
+        right: 60px;
+        bottom: 70px;
+    }
+}
+
+
+// Footer Widget Wrapper
+.footer-widget-wrapper{
+    margin-top: -50px;
+}
+
+// Footer Widget
+.footer-widget {
+    margin-top: 45px;
+}
+
+
+// Footer Widget Title
+.footer-widget-title{
+    font-size: 27px;
+    color: #ffa300;
+    font-weight: 600;
+    white-space: nowrap;
+
+    @media #{$desktop-device}{
+        font-size: 24px;
+    }
+    @media #{$large-mobile}{
+        font-size: 20px;
+    }
+}
+
+
+// Widget Newsletter
+.widget-newsletter{
+    padding-top: 32px;
+    @media #{$extraBig-device, $laptop-device}{
+        padding-right: 70px;
+    }
+
+    & p{
+        color: $white;
+        line-height: 2.13;
+    }
+    & .newsletter-form{
+        margin-top: 35px;
+
+        & input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]){
+            width: 100%;
+            border: 0;
+            height: 50px;
+            padding: 0 30px;
+            border-radius: 10px;
+            background-color: $white;
+            color: $heading-color;
+            
+            @include placeholder{
+                opacity: 1;
+                color: $heading-color;
+            }
+        }
+        & .btn{
+            border-radius: 10px;
+            margin-top: 20px;
+            padding: 0 30px;
+        }
+    }
+}
+
+// Widget Link
+.widget-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     
+
+    & > * {
+        padding-right: 40px;
+
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+}
+
+// Widget Link
+.widget-link{
+    padding-top: 20px;
+
+    & li{
+        font-size: 15px;
+        color: $white;
+        margin-top: 15px;
+
+        @media #{$large-mobile}{
+            font-size: 13px;
+        }
+
+        & a{}
+    }
+}
+
+.widget-location{
+    padding-top: 20px;
+
+    & p{
+        font-size: 15px;
+        color: $white;
+        margin-top: 15px;
+        line-height: 2.1;
+
+        @media #{$large-mobile}{
+            font-size: 13px;
+        }
+    }
+}
+
+
+
+
+
+

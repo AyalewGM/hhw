@@ -1,0 +1,156 @@
+/*--
+/*  4.18 - Contact CSS
+/*----------------------------------------*/
+
+// Contact Map Wrapper 
+.contact-map-wrapper{
+    & iframe{
+        display: block;
+        width: 100%;
+        height: 500px;
+        border-radius: 2px;
+
+        @media #{$small-mobile}{
+            height: 300px;
+        }
+    }
+}
+
+// Contact Wrapper 
+.contact-wrapper{
+    margin-top: -50px;
+}
+
+// Contact Content 
+.contact-content{
+    margin-top: 40px;
+}
+
+// Contact Title 
+.contact-title{
+    & .sub-title{
+        font-size: 35px;
+        font-weight: 400;
+        color: $primary;
+
+        @media #{$small-mobile}{
+            font-size: 24px;
+        }
+    }
+    & .main-title{
+        font-size: 45px;
+        font-weight: 400;
+        margin-top: 15px;
+
+        @media #{$small-mobile}{
+            font-size: 28px;
+        }
+    }
+}
+
+// Form Message 
+.form-message{
+    margin-bottom: 0;
+
+    &.error,
+    &.success {
+        font-size:16px;
+        font-weight: 500;
+        color: $dark;
+        background:#ddd;
+        padding:10px 15px;
+        margin-top: 15px;
+        margin-left: 5px;
+    }
+    &.error {
+        color:#ff0000
+    }
+}
+
+// Contact Form 
+.contact-form{
+    padding-top: 25px;
+
+    & .single-form{
+        & .btn{
+            margin-top: 20px;
+        }
+    }
+}
+
+// Contact Information  
+.contact-information{
+    padding-left: 40px;
+    margin-top: 50px;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-left: 0;
+    }
+
+    & .information-wrapper{
+        background-color: $secondary;
+        padding: 80px 85px;
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        @media #{$desktop-device}{
+            padding: 80px 50px;
+        }
+        @media #{$small-mobile}{
+            padding: 30px;
+        }
+
+        & .shape{
+            position: absolute;
+            top: -130px;
+            right: -210px;
+            z-index: -1;
+        }
+
+        & .single-info{
+
+            & + .single-info{
+                margin-top: 45px;
+            }
+
+            & .info-title{
+                font-size: 32px;
+                font-weight: 500;
+                color: $primary;
+                padding-bottom: 20px;
+
+                @media #{$small-mobile}{
+                    font-size: 24px;
+                }
+            }
+            & p{
+                font-size: 19px;
+                font-weight: 500;
+                color: $white;
+
+                @media #{$small-mobile}{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

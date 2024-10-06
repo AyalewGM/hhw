@@ -1,0 +1,121 @@
+/*--
+/*  4.3 - About CSS
+/*----------------------------------------*/
+
+// About Images
+.about-wrapper{
+    margin-top: -50px;
+}
+
+// About Images 
+.about-images{
+    position: relative;
+    margin-top: 50px;
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(180deg, rgba(10,77,60,0) 0%, rgba(10,77,60,0) 50%, rgba(10,77,60,0.6) 100%);
+    }
+
+    & .shape{
+        position: absolute;
+        top: -60px;
+        left: -60px;
+        animation: spin-1 8s infinite linear;
+
+        @media #{$small-mobile}{
+            width: 100px;
+            left: -20px;
+            top: -20px;
+        }
+    }
+
+    & .images{
+        & img{
+            width: 100%;
+        }
+    }
+    & .about-btn{
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@keyframes spin-1 { 
+    to { 
+      transform: rotate(1turn); 
+    } 
+}
+
+// About Content 
+.about-content{
+    padding: 100px 80px;
+    margin-top: 50px;
+    position: relative;
+    
+    @media #{$desktop-device, $large-mobile}{
+        padding: 40px;
+    }
+
+    & .shape{
+        position: absolute;
+        top: -30px;
+        right: -50px;
+
+        @media #{$small-mobile}{
+            width: 110px;
+            top: -10px;
+            right: -20px;
+        }
+    }
+
+    & .content-wrapper{}
+    & .sub-title{
+        font-family: $body-font;
+        font-size: 14px;
+        font-weight: 700;
+        color: #0a4d3c;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1.4;
+    }
+    & .main-title{
+        font-size: 57px;
+        margin-top: 23px;
+
+        @media #{$desktop-device}{
+            font-size: 44px;
+        }
+        @media #{$large-mobile}{
+            font-size: 44px;
+        }
+        @media #{$small-mobile}{
+            font-size: 24px;
+        }
+    }
+    & .count{
+        font-family: $body-font;
+        font-size: 30px;
+        font-weight: 500;
+        color: #0a4d3c;
+        line-height: 1;
+        margin-top: 40px;
+        display: block;
+
+        @media #{$desktop-device, $small-mobile}{
+            font-size: 24px;
+        }
+    }
+    & p{
+        margin-top: 20px;
+    }
+}
+

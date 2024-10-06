@@ -1,0 +1,72 @@
+/*--
+/*  4.9 - Page Banner CSS
+/*----------------------------------------*/
+
+
+// Page Banner Section 
+.page-banner-section {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 100px;    
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-top: 80px;
+    }
+}
+
+// Page Banner Content
+.page-banner-content {
+    padding-top: 135px;
+    padding-bottom: 140px;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+    @media #{$small-mobile}{
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+
+    // Page Title
+    .page-title {
+        font-size: 58px;
+        line-height: 1.25;
+        font-weight: 600;
+        
+        // Responsive
+        @media #{$tablet-device}{
+            font-size: 44px;
+        }
+        @media #{$large-mobile} {
+            font-size: 36px;
+        }
+        @media #{$small-mobile} {
+            font-size: 30px;
+        }
+    }
+
+    & .breadcrumb{
+        margin-bottom: 0;
+        margin-top: 10px;
+
+        & .breadcrumb-item {
+            font-weight: 500;
+            font-size: 16px;
+            color: $heading-color;
+            
+            & + .breadcrumb-item {
+                &::before{
+                    content: '//';
+                    color: $heading-color;
+                }
+            }
+            &.active{
+                color: $primary;
+            }
+            & a{}
+        }
+    }
+}
+

@@ -1,0 +1,202 @@
+/*--
+/*  3.1 - Header Top CSS
+/*----------------------------------------*/
+
+// Header Main 
+.header-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: $white;
+
+    @media #{$tablet-device, $large-mobile}{
+        padding: 15px 0;
+    }
+}
+
+// Header Wrapper 
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Header Logo
+.header-logo{
+    & a{
+        & img{
+            @media #{$small-mobile}{
+                width: 130px;
+            }
+        }
+    }
+}
+
+// Header Menu 
+.header-menu{
+    display: flex;
+    align-items: center;
+
+    & ul{
+        display: flex;
+
+        & li{
+            position: relative;
+            padding: 36px 0;
+
+            & + li{
+                margin-left: 50px;
+
+                @media #{$desktop-device}{
+                    margin-left: 30px;
+                }
+            }
+
+            & a{
+                font-size: 16px;
+                font-weight: 500;
+                color: $heading-color;
+                transition: $transition-default;
+
+                &.active{
+                    color: $primary;
+                }
+            }
+
+            & ul{
+                display: block;
+
+                & li{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            &:hover{
+                & a{
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+                & > .sub-menu{
+                    opacity: 1;
+                    visibility: visible;
+                    top: 100%;
+                }
+            }
+
+            &:nth-last-of-type(1),
+            &:nth-last-of-type(2){
+                & ul{    
+                    & li{
+                        & .sub-menu{
+                            @media #{$laptop-device, $desktop-device}{
+                                left: auto;
+                                right: 100%;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    & .sub-menu{
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 220px;
+        background-color: $white;
+        box-shadow: 2px 2px 20px rgba($dark, 0.1);
+        border-top: 2px solid $secondary;
+        padding: 6px 0;
+        z-index: 9;
+        opacity: 0;
+        visibility: hidden;
+        transition: $transition-default;
+
+        & li{
+            & a{
+                padding: 6px 20px;
+                font-size: 15px;
+            }
+
+            & .sub-menu{
+                left: 100%;
+                top: 0px;
+                transition: $transition-default;
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            &:hover{
+                & .sub-menu{
+                    top: -8px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+
+// Header Button  
+.header-btn{
+    margin-left: 60px;
+    
+    @media #{$desktop-device}{
+        margin-left: 40px;
+    }
+}
+
+// Header Button  
+.header-toggle{
+    display: flex;
+    align-items: center;
+
+    & .menu-toggle{
+        margin-left: 30px;
+
+        @media #{$small-mobile}{
+            margin-left: 15px;
+        }
+
+        & span{
+            width: 26px;
+            height: 2px;
+            background-color: $heading-color;
+            display: block;
+            margin: 5px 0;
+        }
+    }
+}
+
+
+.sticky {
+    position: fixed;
+    -webkit-animation: sticky 1s;
+    animation: sticky 1s;
+    -webkit-box-shadow: 2px 4px 8px rgba(33,40,50,0.15);
+    box-shadow: 2px 4px 8px rgba(33,40,50,0.15);
+}
+@-webkit-keyframes sticky {
+    0%{
+        transform: translateY(-100%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}
+
+@keyframes sticky {
+    0%{
+        transform: translateY(-100%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}

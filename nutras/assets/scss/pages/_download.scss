@@ -1,0 +1,204 @@
+/*--
+/*  4.8 - Download CSS
+/*----------------------------------------*/
+
+// Download Wrapper 
+.download-wrapper{
+    background-color: $primary;
+    padding: 100px 50px;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    @media #{$extraBig-device}{
+        margin-right: -30px;
+        margin-left: -30px;
+    }
+    @media #{$desktop-device}{
+        padding: 60px 40px;
+    }
+    @media #{$large-mobile}{
+        padding: 50px;
+    }
+    @media #{$small-mobile}{
+        padding: 30px;
+    }
+
+    & .shape-01{
+        position: absolute;
+        left: 50px;
+        bottom: -75px;
+        z-index: -1;
+
+        @media #{$tablet-device}{
+            width: 140px;
+        }
+        @media #{$small-mobile}{
+            width: 100px;
+            left: 15px;
+            bottom: -45px;
+        }
+    }
+    & .shape-02{
+        position: absolute;
+        top: -50px;
+        right: 40px;
+        z-index: -1;
+
+        @media #{$tablet-device}{
+            width: 120px;
+        }
+        @media #{$small-mobile}{
+            width: 80px;
+            right: 20px;
+        }
+    }
+
+    & .section-title{
+        & .main-title{
+            color: $white;
+        }
+    }   
+    
+    & .download-app{
+        padding-top: 25px;
+
+        & ul{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            & li{
+                padding: 30px 15px 0;
+
+                & a{
+                    width: 180px;
+                    height: 65px;
+                    border-radius: 10px;
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.15);
+
+                    @media #{$large-mobile}{
+                        width: auto;
+                        padding: 0 20px;
+                        height: 50px;
+                    }
+
+                    & img{
+                        @media #{$large-mobile}{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Download Section 
+.download-section{
+    position: relative;
+    background-color: $primary;
+    overflow: hidden;
+    z-index: 1;
+
+    & .shape-01{
+        position: absolute;
+        left: 50px;
+        bottom: -75px;
+        z-index: -1;
+
+        @media #{$tablet-device}{
+            width: 140px;
+        }
+        @media #{$small-mobile}{
+            width: 100px;
+            left: 15px;
+            bottom: -45px;
+        }
+    }
+    & .shape-02{
+        position: absolute;
+        top: -50px;
+        right: 40px;
+        z-index: -1;
+
+        @media #{$tablet-device}{
+            width: 120px;
+        }
+        @media #{$small-mobile}{
+            width: 80px;
+            right: 20px;
+        }
+    }
+}
+
+// Download App Wrapper 
+.download-app-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    & .section-title{
+        text-align: left;
+        max-width: 630px;
+        
+        & .main-title{
+            color: $white;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+    }
+
+    & .download-app-btn{
+        padding-top: 25px;
+
+        & .app-btn{
+            display: flex;
+            flex-wrap: wrap;
+
+            & li{
+                padding: 30px 15px 0;
+
+                & a{
+                    width: 180px;
+                    height: 60px;
+                    border-radius: 10px;
+                    background-color: $white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.15);
+
+                    @media #{$large-mobile}{
+                        width: auto;
+                        padding: 0 20px;
+                        height: 50px;
+                    }
+
+                    & img{
+                        @media #{$large-mobile}{
+                            width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

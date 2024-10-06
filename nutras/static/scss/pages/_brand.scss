@@ -1,0 +1,100 @@
+/*--
+/*  4.6 - Brand CSS
+/*----------------------------------------*/
+
+// Brand Wrapper 
+.brand-wrapper{
+    background-color: $grey;
+    padding: 150px 140px;
+    position: relative;
+    
+    @media #{$extraBig-device}{
+        margin-left: -140px;
+        margin-right: -140px;
+    }
+    @media #{$desktop-device}{
+        padding: 100px 90px;
+    }
+    @media #{$tablet-device}{
+        padding: 60px 50px;
+    }
+    @media #{$large-mobile}{
+        padding: 40px 30px;
+    }
+
+    & .shape{
+        position: absolute;
+        top: 90px;
+        right: -80px;
+
+        @media #{$tablet-device}{
+            width: 160px;
+            top: 50px;
+            right: -50px;
+        }
+        @media #{$large-mobile}{
+            width: 100px;
+            top: 30px;
+            right: -40px;
+        }
+        @media #{$small-mobile}{
+            width: 70px;
+            top: 15px;
+            right: -20px;
+        }
+    }
+}
+
+// Brand Logo Wrapper 
+.brand-logo-wrapper{
+    padding-top: 90px;
+
+    @media #{$large-mobile}{
+        padding-top: 40px;
+    }
+}
+
+// Single Brand 
+.single-brand{
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+
+    & img{
+        transition: $transition-default;
+    }
+    & .brand{}
+    & .brand-hover{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(100%);
+    }
+
+    &:hover{
+        & .brand{
+            transform: translateY(-100%);
+        }
+        & .brand-hover{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

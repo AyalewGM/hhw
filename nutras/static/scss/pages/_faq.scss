@@ -1,0 +1,89 @@
+/*--
+/*  4.16 - FAQ'S CSS
+/*----------------------------------------*/
+
+// FAQ Accordion 
+.faq-accordion{
+    padding-top: 50px;
+
+    & .accordion{}
+
+    // Accordion Item
+    & .accordion-item{
+        border-radius: 2px !important;
+        margin-top: 20px;
+        border: 1px solid #e7e2dc !important;
+
+        & button{
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 17px 30px;
+            padding-right: 55px;
+            font-size: 23px;
+            font-weight: 500;
+            font-family: $heading-font;
+            border: 0;
+            color: $primary;
+            background-color: transparent;
+            border-bottom: 1px solid #e7e2dc;
+            transition: $transition-default;
+            position: relative;
+
+            @media #{$large-mobile}{
+                font-size: 20px;
+            }
+            @media #{$small-mobile}{
+                font-size: 16px;
+                padding: 12px 20px;
+                padding-right: 45px;
+            }
+
+            &::before{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30px;
+                content: '\eab9';
+                font-family: IcoFont;
+                transition: $transition-default;
+
+                @media #{$small-mobile}{
+                    right: 20px;
+                }
+            }
+            
+            &.collapsed{
+                color: $heading-color;
+                background-color: $grey;
+                border-bottom-color: transparent;
+                
+                &::before{
+                    content: '\ea99';
+                }
+            }
+        }
+        & .accordion-body{
+            padding: 25px 30px;
+            
+            &.show{}
+
+            & p{
+                & + p{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+// FAQ Button
+.faq-btn{
+    padding-top: 80px;
+    text-align: center;
+
+    @media #{$large-mobile}{
+        padding-top: 40px;
+    }
+}
+
