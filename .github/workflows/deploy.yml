@@ -29,4 +29,6 @@ jobs:
             sudo a2ensite hhw.conf
             sudo a2dissite 000-default.conf
             sudo a2enmod wsgi
+            sudo touch /var/www/hhw/nutras/test.log
+            sudo chown -R www-data:www-data /var/www/hhw
             sudo systemctl restart apache2
