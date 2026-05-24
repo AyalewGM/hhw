@@ -25,4 +25,8 @@ jobs:
             git pull origin main
             source env/bin/activate
             pip install -r requirements.txt --quiet
+            sudo cp /var/www/hhw/hhw.conf /etc/apache2/sites-available/hhw.conf
+            sudo a2ensite hhw.conf
+            sudo a2dissite 000-default.conf
+            sudo a2enmod wsgi
             sudo systemctl restart apache2
