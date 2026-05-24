@@ -1,0 +1,26 @@
+# Virtual environments
+env/
+env2/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+nutras/test.log
+nutras/logs/
+
+# OS
+.DS_Store
+Thumbs.db

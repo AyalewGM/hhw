@@ -1,10 +1,11 @@
 import datetime
 import pandas as pd
-from flask import Flask, render_template, request,logging
+from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 from flask_mail import Mail, Message
 import logging
 import ssl
+import os
 
 app = Flask(__name__)
 
@@ -23,7 +24,8 @@ mysql = MySQL(app)
 mail = Mail(app)
 
 logger = logging.getLogger('werkzeug')
-handler = logging.FileHandler('/var/www/hhw/nutras/test.log')
+LOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'test.log')
+handler = logging.FileHandler(LOG_PATH)
 logger.addHandler(handler)
 
 @app.route('/')
@@ -42,13 +44,13 @@ def about():
 def faq():
     return render_template('faq.html')
 
-@app.route('/team')
-def team():
-    return render_template('team.html')
+# @app.route('/team')  # DISABLED: template team.html missing
+# def team():
+#     return render_template('team.html')
 
-@app.route('/classes')
-def classes():
-    return render_template('classes.html')
+# @app.route('/classes')  # DISABLED: template classes.html missing
+# def classes():
+#     return render_template('classes.html')
 
 #@app.route('/begenaclasses')
 #def begenaclasses():
@@ -87,96 +89,96 @@ def blog():
     return render_template('blog-details-right-sidebar.html')
 
 #--------HHW-----end-------
-@app.route('/masinkoclass')
-def masinkoclasses():
-    return render_template('classmasinko.html')
+# @app.route('/masinkoclass')  # DISABLED: template classmasinko.html missing
+# def masinkoclasses():
+#     return render_template('classmasinko.html')
 
 #------AM Started 
-@app.route('/kirarclass')
-def classkirar():
-    return render_template('classkirar.html')
+# @app.route('/kirarclass')  # DISABLED: template classkirar.html missing
+# def classkirar():
+#     return render_template('classkirar.html')
 
-@app.route('/abinetclass')
-def classabinet():
-    return render_template('classabinet.html')
+# @app.route('/abinetclass')  # DISABLED: template classabinet.html missing
+# def classabinet():
+#     return render_template('classabinet.html')
 #######End##########
 
-@app.route('/form')
-def form():
-    return render_template('form.html')
+# @app.route('/form')  # DISABLED: template form.html missing
+# def form():
+#     return render_template('form.html')
 
-@app.route('/shop_category')#Sample 
-def shop_category():
-    return render_template('shop_category.html')
+# @app.route('/shop_category')  # DISABLED: template shop_category.html missing
+# def shop_category():
+#     return render_template('shop_category.html')
 
 #------AM Started 
-@app.route('/shop_cart')
-def shop_cart():
-    return render_template('shop_cart.html')
+# @app.route('/shop_cart')  # DISABLED: template shop_cart.html missing
+# def shop_cart():
+#     return render_template('shop_cart.html')
 
-@app.route('/shop_checkout')
-def shop_checkout():
-    return render_template('shop_checkout.html')
+# @app.route('/shop_checkout')  # DISABLED: template shop_checkout.html missing
+# def shop_checkout():
+#     return render_template('shop_checkout.html')
 
-@app.route('/shop_account')
-def shop_account():
-    return render_template('shop_account.html')
+# @app.route('/shop_account')  # DISABLED: template shop_account.html missing
+# def shop_account():
+#     return render_template('shop_account.html')
 
-@app.route('/portfolio_gallery')
-def portfolio_gallery():
-    return render_template('portfolio_gallery.html')
+# @app.route('/portfolio_gallery')  # DISABLED: template portfolio_gallery.html missing
+# def portfolio_gallery():
+#     return render_template('portfolio_gallery.html')
 
-@app.route('/about-me')
-def about_me():
-    return render_template('about_me.html')
+# @app.route('/about-me')  # DISABLED: template about_me.html missing
+# def about_me():
+#     return render_template('about_me.html')
 
-@app.route('/pricing')
-def pricing():
-    return render_template('pricing.html')
+# @app.route('/pricing')  # DISABLED: template pricing.html missing
+# def pricing():
+#     return render_template('pricing.html')
 
-@app.route('/coming')
-def coming():
-    return render_template('coming_soon.html')
+# @app.route('/coming')  # DISABLED: template coming_soon.html missing
+# def coming():
+#     return render_template('coming_soon.html')
 
 @app.route('/error')
 def error():
     return render_template('404-error.html')
 
-@app.route('/classes_desc')
-def classes_desc():
-    return render_template('classes_desc.html')
+# @app.route('/classes_desc')  # DISABLED: template classes_desc.html missing
+# def classes_desc():
+#     return render_template('classes_desc.html')
 
-@app.route('/classes_schedule')
-def classes_schedule():
-    return render_template('classes_schedule.html')
+# @app.route('/classes_schedule')  # DISABLED: template classes_schedule.html missing
+# def classes_schedule():
+#     return render_template('classes_schedule.html')
 
-@app.route('/challenges')
-def challenges():
-    return render_template('challenges.html')
+# @app.route('/challenges')  # DISABLED: template challenges.html missing
+# def challenges():
+#     return render_template('challenges.html')
 
-@app.route('/classes_single')
-def classes_single():
-    return render_template('classes_single.html')
+# @app.route('/classes_single')  # DISABLED: template classes_single.html missing
+# def classes_single():
+#     return render_template('classes_single.html')
 
-@app.route('/challenge_single')
-def challenge_single():
-    return render_template('challenge_single.html')
+# @app.route('/challenge_single')  # DISABLED: template challenge_single.html missing
+# def challenge_single():
+#     return render_template('challenge_single.html')
 
-@app.route('/events_list')
-def events_list():
-    return render_template('events_list.html')
+# @app.route('/events_list')  # DISABLED: template events_list.html missing
+# def events_list():
+#     return render_template('events_list.html')
 
-@app.route('/events_month')
-def events_month():
-    return render_template('events_month.html')
+# @app.route('/events_month')  # DISABLED: template events_month.html missing
+# def events_month():
+#     return render_template('events_month.html')
 
-@app.route('/events_masonry')
-def events_masonry():
-    return render_template('events_masonry.html')
+# @app.route('/events_masonry')  # DISABLED: template events_masonry.html missing
+# def events_masonry():
+#     return render_template('events_masonry.html')
 
-@app.route('/events_single')
-def events_single():
-    return render_template('events_single.html')
+# @app.route('/events_single')  # DISABLED: template events_single.html missing
+# def events_single():
+#     return render_template('events_single.html')
 
 #----------End-----------
 
@@ -199,35 +201,35 @@ def contact():
         message_sender(df)
         return render_template('index.html')
 
-@app.route('/registration', methods=['POST', 'GET'])
-def login():
-    if request.method == 'GET':
-        logging.info(str(request.data))
-        return render_template("online_regesteration.html")
-
-    if request.method == 'POST':
-        logger.info(f"==================={str(request.form['bDay'])}")
-
-        last_name = request.form['lastName']
-        first_name = request.form['firstName']
-        baptism_name = request.form['firstName']
-        gender = request.form["gender"]
-        phone = request.form["phone"]
-        email = request.form["email"]
-        country = request.form["country"]
-        bday  = request.form["bDay"]
-        password = request.form["password"]
-        df = pd.DataFrame([["Last Name", last_name], ['First Name',first_name], ['email', email]], columns = ["person", "information"])
-
-        message_sender(df,  registration=True)
-        #bday = datetime.datetime.strptime(bday, "%Y-%m-%d").date()
-        logger.info(f"Birth day :{bday}")
-        cursor = mysql.connection.cursor()
-        cursor.execute('INSERT INTO student VALUES(%s, %s,%s,%s,%s, %s,%s, %s,%s,%s)', (0,last_name, first_name, baptism_name, gender, phone, email, bday,country,password))
-        mysql.connection.commit()
-        cursor.close()
-
-        return render_template('home_5.html')
+# @app.route('/registration', methods=['POST', 'GET'])  # DISABLED: templates online_regesteration.html and home_5.html missing
+# def login():
+#     if request.method == 'GET':
+#         logging.info(str(request.data))
+#         return render_template("online_regesteration.html")
+#
+#     if request.method == 'POST':
+#         logger.info(f"==================={str(request.form['bDay'])}")
+#
+#         last_name = request.form['lastName']
+#         first_name = request.form['firstName']
+#         baptism_name = request.form['firstName']
+#         gender = request.form["gender"]
+#         phone = request.form["phone"]
+#         email = request.form["email"]
+#         country = request.form["country"]
+#         bday  = request.form["bDay"]
+#         password = request.form["password"]
+#         df = pd.DataFrame([["Last Name", last_name], ['First Name',first_name], ['email', email]], columns = ["person", "information"])
+#
+#         message_sender(df,  registration=True)
+#         #bday = datetime.datetime.strptime(bday, "%Y-%m-%d").date()
+#         logger.info(f"Birth day :{bday}")
+#         cursor = mysql.connection.cursor()
+#         cursor.execute('INSERT INTO student VALUES(%s, %s,%s,%s,%s, %s,%s, %s,%s,%s)', (0,last_name, first_name, baptism_name, gender, phone, email, bday,country,password))
+#         mysql.connection.commit()
+#         cursor.close()
+#
+#         return render_template('home_5.html')
 
 def message_sender(df, registration=False):#, 'addis_mul@gmail.com'
     if registration:
@@ -258,7 +260,7 @@ def styler(df):
         ],
         }
     ]
-    dfhtml = (df.style.set_table_styles(styles).render())
+    dfhtml = (df.style.set_table_styles(styles).to_html())
     content = """
     <html>
     <head>
