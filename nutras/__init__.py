@@ -1,7 +1,7 @@
 import datetime
 import pandas as pd
 from flask import Flask, render_template, request
-from flask_mysqldb import MySQL
+# from flask_mysqldb import MySQL  # Commented out - will use postgres later
 from flask_mail import Mail, Message
 import logging
 import ssl
@@ -9,10 +9,10 @@ import os
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
-app.config['MYSQL_DB'] = 'registration'
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = 'root'
+# app.config['MYSQL_DB'] = 'registration'
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'hamrishealthandwellness@gmail.com'
@@ -20,7 +20,7 @@ app.config['MAIL_PASSWORD'] = 'Emuadd@2509'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
-mysql = MySQL(app)
+# mysql = MySQL(app)
 mail = Mail(app)
 
 logger = logging.getLogger('werkzeug')

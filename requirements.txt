@@ -3,12 +3,12 @@ click
 colorama
 Flask
 Flask-Mail
-Flask-MySQLdb
+# Flask-MySQLdb  # Uncomment when using postgres/mysql later
 importlib-metadata
 itsdangerous
 Jinja2
 MarkupSafe
-mysqlclient
+# mysqlclient  # Uncomment when using postgres/mysql later
 numpy
 pandas
 python-dateutil
