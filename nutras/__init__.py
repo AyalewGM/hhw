@@ -80,6 +80,10 @@ def restore():
 def body_vagus():
     return render_template('body_vagus.html')
 
+@app.route('/colon_hydrotherapy')
+def colon_hydrotherapy():
+    return render_template('colon_hydrotherapy.html')
+
 @app.route('/school')
 def school():
     return render_template('school.html')
